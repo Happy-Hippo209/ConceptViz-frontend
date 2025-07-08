@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ConceptViz Frontend
 
-## Getting Started
+The frontend application for ConceptViz - a visual analytics system for exploring concepts in Large Language Models through Sparse Autoencoders.
 
-First, run the development server:
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14+ with TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Redux Toolkit
+- **Data Visualization**: D3.js for custom visualization component
+
+## 📁 Project Structure
+
+```
+frontend/
+├── public/                 # Static assets and favicon
+├── src/
+│   ├── app/               # Next.js 13+ app directory
+│   │   ├── components/    # Reusable UI components
+│   │   ├── favicon.ico    # App favicon
+│   │   ├── globals.css    # Global styles
+│   │   ├── layout.tsx     # Root layout component
+│   │   └── page.tsx       # Home page component
+│   ├── data/              # Data models and configurations
+│   │   ├── gemma-2-2b.json       # Preprocessed Metric for Gemma 2 2b
+│   │   └── metricOptions.ts      # 
+│   ├── redux/             # Redux state management
+│   │   ├── features/      # Redux feature slices
+│   │   ├── hooks.ts       # Typed Redux hooks
+│   │   ├── provider.tsx   # Redux provider wrapper
+│   │   └── store.ts       # Store configuration
+│   ├── types/             # TypeScript type definitions
+│   │   ├── ...
+│   └── utils/             # Utility functions and helpers
+│       └── utils.tsx      # Common utility functions
+├── ...
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or later
+- npm, yarn, or pnpm
+
+### Installation
+
+1. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Development
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+# or
+pnpm build
+pnpm start
+```
 
-## Learn More
+## 📱 Display Requirements
 
-To learn more about Next.js, take a look at the following resources:
+> **⚠️ Important Note**: This application is currently optimized for **2K displays (2560×1440)** and may not render correctly on other screen resolutions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Recommended Setup:**
+- **Resolution**: 2560×1440 (2K) or similar high-DPI displays
+- **Browser**: Chrome, Firefox, or Safari with hardware acceleration enabled
+- **Zoom Level**: 100% browser zoom for optimal layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Known Limitations:**
+- Layout may appear cramped on 1080p displays
+- Text and UI elements might be too small on 4K displays
+- Mobile and tablet views are not currently supported
+- Responsive design for various screen sizes is planned for future releases
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For more information about the overall project, see the [main repository](../README.md).
