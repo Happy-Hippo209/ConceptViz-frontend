@@ -92,4 +92,4 @@ pnpm start
 
 ---
 
-For more information about the overall project, see the [main repository](../README.md).
+For more information about the overall project, see the [main repository](https://github.com/Happy-Hippo209/ConceptViz).
